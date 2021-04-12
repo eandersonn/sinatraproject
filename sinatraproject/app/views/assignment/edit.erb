@@ -1,0 +1,20 @@
+<h2> Edit <%= @assignment.title %></h2>
+
+<form action="/assignments/<%= @assignment.id %>" method="POST" >
+    <input type="hidden" name="_method" value="PUT" >
+    Title: <input type="text" name="assignment[title]" value= "<%= @assignment.title %>">
+    <br>
+    <br>
+    Description: <input type="text" name="assignment[content]" value="<%= @assignment.content %>">
+    <br>
+    <br>
+    <input type="submit" value="Update Assignment">
+</form>
+<br>
+<br>
+
+<div class="sidebar">
+      <ul>
+        <li><b>ARE YOU DONE?  </b><a href="/logout">LOGOUT</a></li>
+      </ul>
+</div>
