@@ -1,0 +1,16 @@
+<h1> Assignments </h1>
+<br>
+<% if logged_in? %>
+    <h2>Hi <%= current_user.name %></h2>
+<% end %>
+<% @assignments.each do |t| %>
+    <h3><a href = "/assignments/<%=t.id %>"><%=t.title %></a></h3> <br>
+<% end %>
+<br>
+<a href="/assignments/new">Create A New Assignment</a>
+
+<div class="sidebar">
+      <ul>
+        <li><b>ARE YOU DONE?  </b><a href="/logout">LOGOUT</a></li>
+      </ul>
+</div>

@@ -1,0 +1,21 @@
+<h1><%= @assignment.title %></h1>
+<h3>Assignment Description: </h3> <p><%= @assignment.content %></p>
+    
+<% if @assignment.user == current_user %>
+
+    <a href="/assignments/<%= @assignment.id %>/edit">Edit This Assignment</a>
+
+    <form action="/assignments/<%= @assignment.id %>" method="POST">
+        <input type= "hidden" name="_method" value="DELETE">
+        <br>
+        <input type="submit" value="Delete This Assignment">
+    </form></h3>
+
+    <div class="sidebar">
+      <ul>
+        <li><b>ARE YOU DONE?  </b><a href="/logout">LOGOUT</a></li>
+      </ul>
+    </div>
+
+
+<% end %>
